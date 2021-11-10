@@ -15,7 +15,7 @@ const TopBanner = () => {
             image="https://thumbs.dreamstime.com/b/indigenous-craft-market-los-ponchos-square-ecuador-town-otavalo-one-182366692.jpg"
           />
           <CardContent>
-            <Link  style={{ textDecoration: 'none'}} to="/purchase">
+            <Link  style={{ textDecoration: 'none'}} to="/explore">
           <Button variant="contained">Explore More</Button>
          </Link>
           </CardContent>

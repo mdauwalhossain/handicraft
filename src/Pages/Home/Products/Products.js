@@ -31,8 +31,7 @@ const Products = () => {
                 {
                 infos.slice(0,1).map(info => <Body 
                     key= {info.id}
-                    info={info}
-                                                                        
+                    info={info}                                        
                     ></Body>)
                 } 
             </Item>
