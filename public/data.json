@@ -1,0 +1,101 @@
+[
+    {
+      "id": "101",
+      "name": "Handlooms and Textiles",
+      "price": "$228",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (924) 560-2534"
+    },
+    {
+      "id": "102",
+      "name": "Jewelry",
+      "price": "$190",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (917) 499-3902"
+    },
+    {
+      "id": "103",
+      "name": "Apparels",
+      "price": "$110",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (853) 587-2838"
+    },
+    {
+      "id": "104",
+      "name": "Carpets",
+      "price": "$193",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (862) 598-3351"
+    },
+    {
+      "id": "105",
+      "name": "Leather Goods",
+      "price": "$264",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (998) 405-3125"
+    },
+    {
+      "id": "106",
+      "name": "Paintings",
+      "price": "$379",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (958) 518-2337"
+    },
+    {
+      "id": "107",
+      "name": "Garments",
+      "price": "$193",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (901) 554-3508"
+    },
+    {
+      "id": "108",
+      "name": "Paper Products",
+      "price": "$182",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (986) 565-2642"
+    },
+    {
+      "id": "109",
+      "name": "Furniture",
+      "price": "$236",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (928) 566-3945"
+    },
+    {
+      "id": "110",
+      "name": "Zardozi",
+      "price": "$374",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (851) 472-3679"
+    },
+    {
+      "id": "111",
+      "name": "Sewing",
+      "price": "$365",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqlc_z5XKSDvZKv45nF8JU3_QblS9KIs7jQ&usqp=CAU",
+      "details": "A handicraft, sometimes more precisely expressed as artisanal handicraft or handmade, is any of a wide variety of types of work where useful and decorative objects are made completely by one’s hand or by using only simple.",
+      "email": "handicraft@polarium.com",
+      "phone": "+1 (828) 419-2683"
+    }
+  ]
