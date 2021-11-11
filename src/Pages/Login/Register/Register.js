@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Alert, Button, CircularProgress, TextField } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
-
+    const history = useHistory();
     const {user, authError, registerUser, isLoading} = useAuth();
     // console.log(registerUser)
 
@@ -18,17 +18,17 @@ const Register = () => {
         const newLoginData = { ...loginData };
       
         newLoginData[field] = value;
-        console.log(newLoginData)
+        // console.log(newLoginData)
         setLoginData(newLoginData);
     }
 
     const handleLoginSubmit = e =>{
         
-        // if (loginData.password !== loginData.password2) {
-        //     alert('Your password did not match');
-        //     return
-        // }
-        registerUser(loginData.email, loginData.password);
+        if (loginData.password !== loginData.password2) {
+            alert('Your password did not match');
+            return
+        }
+        registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault()
         // console.log(handleLoginSubmit)
     }
