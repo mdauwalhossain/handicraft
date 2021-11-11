@@ -1,16 +1,11 @@
 import React, {useState} from 'react';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import useAuth from '../hooks/useAuth';
 
 const Purchase = () => {
-
     const {user} = useAuth();
-    // console.log(user)
-
     const initialInfo = {clientName: '', email: user.email, phone: ''}
-
     const [bookingInfo, setBookingInfo] = useState(initialInfo);
 
     const handleOnBlur = e =>{
@@ -23,6 +18,7 @@ const Purchase = () => {
     }
 
     const handleBookingSubmit = e =>{
+        alert('Successfully placed order')
              // collect data
             const appointment = {
                 ...bookingInfo,
@@ -39,7 +35,7 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    
+
                 }
             })
 
@@ -75,7 +71,6 @@ const Purchase = () => {
         label="Write something if you want" 
         variant="outlined" />
         <br />
-
         <Button type="submit" variant="contained">Submit</Button>
         </form>
    

@@ -10,7 +10,7 @@ const Body = ({booking}) => {
         <>
             <Grid item xs={12} sm={6} md={4}>
             <Paper elevation={3}>
-            <img src={image}/>
+            <img src={image} alt=""/>
             <Typography variant="h6" gutterBottom component="div">
                 {name}
             </Typography>

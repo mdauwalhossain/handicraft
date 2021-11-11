@@ -8,6 +8,7 @@ import Navigation from './Pages/Home/Navigation/Navigation';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 
 
@@ -27,15 +28,23 @@ function App() {
          <Route path="/explore">
           <Explore></Explore>
          </Route>
+
          <PrivateRoute path="/purchase">
           <Purchase></Purchase>
          </PrivateRoute>
+         
+         <PrivateRoute path="/dashboard">
+          <Dashboard></Dashboard>
+         </PrivateRoute>
+
          <Route path="/login">
           <Login></Login>
          </Route>
+
          <Route path="/register">
           <Register></Register>
          </Route>
+
        </Switch>
      </Router>
      </AuthProvider>
