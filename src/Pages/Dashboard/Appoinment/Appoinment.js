@@ -1,20 +1,56 @@
 import { Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 
 const Appoinment = () => {
     const {user} = useAuth();
-    const [appoinments, setAppoinments] = useState([])
+    const [appointments, setAppointments] = useState([])
 
     useEffect( () =>{
-        const url=``
-        fetch('')
+        const url=`http://localhost:5000/purchase?email=${user.email}`
+        fetch(url)
+        .then(res => res.json())
+        .then(data => setAppointments(data));
     } ,[])
     return (
         <div>
-            appoinment page
-            <Grid item xs={4}>
-          
+            appointment {appointments.length}
+            <TableContainer component={Paper}>
+      <Table sx={{}} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">Action</TableCell>
+           
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {appointments.map((row) => (
+            <TableRow
+              key={row._id}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.clientName}
+              </TableCell>
+              <TableCell align="right">{row.Action}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+
+
+            <Grid item xs={4}>          
             </Grid>
         </div>
     );

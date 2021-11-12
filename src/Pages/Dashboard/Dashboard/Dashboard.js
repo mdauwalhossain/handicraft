@@ -15,6 +15,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Appoinment from '../Appoinment/Appoinment';
+import { Button, Grid } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -30,6 +33,7 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
+      <NavLink  style={{ textDecoration: 'none', color: 'red'}} to="/purchase"><Button color="inherit">Action</Button></NavLink>
       <List>
         {['Order', 'Product', 'Admin', 'Manage'].map((text, index) => (
           <ListItem button key={text}>
@@ -67,7 +71,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Handcraft site.
+            Handcraft site (Booking Information)
           </Typography>
         </Toolbar>
       </AppBar>
@@ -108,9 +112,13 @@ function Dashboard(props) {
       >
         <Toolbar />
        
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit.
+        <Typography variant="h6" gutterBottom component="div">
+          
         </Typography>
+        <Grid items xs={12} md={8}>
+        <Appoinment></Appoinment>
+        </Grid>
+        
       </Box>
     </Box>
   );
