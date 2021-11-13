@@ -1,0 +1,15 @@
+.footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(33,37,41);    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+  }
+
+  .footer a{
+    margin-right: 30px;
+    color: gold;
+    font-size: x-large;
+  }

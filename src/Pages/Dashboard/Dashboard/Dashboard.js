@@ -91,7 +91,7 @@ function Dashboard(props) {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             
-            <NavLink  style={{ textDecoration: 'none', color: 'yellow'}} to="/appointment"><Button color="inherit">Appointmet</Button></NavLink>
+          <NavLink  style={{ textDecoration: 'none', color: 'yellow'}} to="/appointment"><Button color="inherit">Appointmet</Button></NavLink>
             <NavLink  style={{ textDecoration: 'none', color: 'pink'}} to={`${url}`}><Button color="inherit">Dashboard</Button></NavLink>
             <NavLink  style={{ textDecoration: 'none', color: 'pink'}} to={`${url}/review`}><Button color="inherit">Review</Button></NavLink>
             

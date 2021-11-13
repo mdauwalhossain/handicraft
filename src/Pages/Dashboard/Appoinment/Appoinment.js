@@ -11,12 +11,16 @@ import Paper from '@mui/material/Paper';
 
 
 const Appoinment = () => {
-    const {user} = useAuth();
+    const {user, token} = useAuth();
     const [appointments, setAppointments] = useState([])
 
     useEffect( () =>{
-        const url=`http://localhost:5000/purchase?email=${user.email}`
-        fetch(url)
+        const url=`https://frozen-springs-24177.herokuapp.com/purchase?email=${user.email}`
+        fetch(url, {
+          headers: {
+            'authorization': `Bearer ${token}`
+          }
+        }) 
         .then(res => res.json())
         .then(data => setAppointments(data));
     } ,[])

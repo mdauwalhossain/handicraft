@@ -9,6 +9,7 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -27,6 +28,9 @@ function App() {
          </Route>
          <Route path="/explore">
           <Explore></Explore>
+         </Route>
+         <Route path="*">
+          <NotFound></NotFound>
          </Route>
 
          <PrivateRoute path="/purchase">

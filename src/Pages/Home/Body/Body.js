@@ -10,7 +10,7 @@ const Body = ({booking}) => {
         <>
             <Grid item xs={12} sm={6} md={4}>
             <Paper elevation={3}>
-            <img src={image} alt=""/>
+            <img style={{width: '300px', height: '250px'}} src={image} alt=""/>
             <Typography variant="h6" gutterBottom component="div">
                 {name}
             </Typography>
@@ -22,8 +22,9 @@ const Body = ({booking}) => {
             </Typography>
            
             <Link style={{textDecoration: 'none'}} to="/purchase">
-            <Button style={{textDecoration: 'none'}} variant="contained">Buy Now</Button>
+            <Button sx={{ whiteSpace: 'nowrap'}} style={{textDecoration: 'none'}} variant="contained">Buy Now</Button> 
             </Link>
+           
 
             </Paper>
            </Grid>

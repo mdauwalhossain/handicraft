@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Products from '../Products/Products';
 import TopBanner from '../TopBanner/TopBanner';
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <TopBanner></TopBanner>
             <Products></Products>
+            <Footer></Footer>
         </div>
     );
 };

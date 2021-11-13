@@ -51,7 +51,7 @@ const Register = () => {
                         label="Your Email"
                         type="email"
                         name="email"
-                        onBlur={handleOnBlur}
+                        onChange={handleOnBlur}
                         variant="standard" />
                     <TextField
                         sx={{ width: '50%', m: 1 }}
@@ -59,7 +59,7 @@ const Register = () => {
                         label="Your Password"
                         type="password"
                         name="password"
-                        onBlur={handleOnBlur}
+                        onChange={handleOnBlur}
                         variant="standard" />
                          <TextField
                             sx={{ width: '50%', m: 1 }}
@@ -67,7 +67,7 @@ const Register = () => {
                             label="Re-Type Your Password"
                             type="password"
                             name="password2"
-                            onBlur={handleOnBlur}
+                            onChange={handleOnBlur}
                             variant="standard" />
 
                     <Button sx={{ width: '50%', m: 1 }} type="submit" variant="contained">Register</Button>

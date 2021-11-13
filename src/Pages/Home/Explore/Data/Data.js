@@ -1,8 +1,15 @@
-import { Button, Grid } from '@mui/material';
-import React from 'react';
+import { Button, CardMedia, Grid } from '@mui/material';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+
+
+
+
+import Box from '@mui/material/Box';
+
+
 
 const Data = ({booking}) => {
     const {name,image, details, price} = booking;    
@@ -11,7 +18,15 @@ const Data = ({booking}) => {
         <>           
             <Grid item xs={12} sm={6} md={4}>
             <Paper elevation={3}>
-            <img src={image} alt=""/>
+
+           {/* abc */}
+           <img 
+      style={{width: '300px', height: '250px'}}
+
+      src={image} alt=""/>
+           {/* xyz */}
+
+            
             <Typography variant="h6" gutterBottom component="div">
                 {name}
             </Typography>

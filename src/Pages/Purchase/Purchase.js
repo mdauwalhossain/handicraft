@@ -25,7 +25,7 @@ const Purchase = () => {
             }
             // console.log(appointment);
             // send to server
-            fetch('http://localhost:5000/purchase', {
+            fetch('https://frozen-springs-24177.herokuapp.com/purchase', {
                 method: 'POST',
                 headers: {'content-type': 'application/json'
  
