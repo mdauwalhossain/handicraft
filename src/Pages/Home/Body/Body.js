@@ -22,7 +22,7 @@ const Body = ({booking}) => {
             </Typography>
            
             <Link style={{textDecoration: 'none'}} to="/purchase">
-            <Button sx={{ whiteSpace: 'nowrap'}} style={{textDecoration: 'none'}} variant="contained">Buy Now</Button> 
+            <Button sx={{ whiteSpace: 'nowrap', m: 2}} style={{textDecoration: 'none'}} variant="contained">Buy Now</Button> 
             </Link>
            
 

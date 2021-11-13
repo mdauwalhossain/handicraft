@@ -38,7 +38,7 @@ const Data = ({booking}) => {
             </Typography>
            
             <Link style={{textDecoration: 'none'}} to="/purchase">
-            <Button style={{textDecoration: 'none'}} variant="contained">Buy Now</Button>            
+            <Button style={{textDecoration: 'none'}} sx={{ m: 2 }} variant="contained">Buy Now</Button>            
             </Link>            
             </Paper>
            </Grid>

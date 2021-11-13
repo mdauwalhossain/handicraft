@@ -47,11 +47,11 @@ function Dashboard(props) {
   };
 
   const drawer = (
-    <div>
+    <div style={{backgroundColor: "#20B2AA"}}>
       <Toolbar />
       <Divider />
       
-      <List>
+      <List >
         
         {['Order', 'Product', 'Admin', 'Manage'].map((text, index) => (
           <ListItem button key={text}>
@@ -63,6 +63,7 @@ function Dashboard(props) {
         ))}
       </List>
       <Divider />
+    
     </div>
   );
 
@@ -70,13 +71,14 @@ function Dashboard(props) {
   
    
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} style={{backgroundColor: "#228B22"}}>
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          
         }}
       >
         <Toolbar>
@@ -91,7 +93,7 @@ function Dashboard(props) {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             
-          <NavLink  style={{ textDecoration: 'none', color: 'yellow'}} to="/appointment"><Button color="inherit">Appointmet</Button></NavLink>
+          <NavLink  style={{ textDecoration: 'none', color: 'yellow'}} to="/appointment"><Button color="inherit"></Button></NavLink>
             <NavLink  style={{ textDecoration: 'none', color: 'pink'}} to={`${url}`}><Button color="inherit">Dashboard</Button></NavLink>
             <NavLink  style={{ textDecoration: 'none', color: 'pink'}} to={`${url}/review`}><Button color="inherit">Review</Button></NavLink>
             

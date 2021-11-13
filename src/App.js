@@ -29,7 +29,7 @@ function App() {
          <Route path="/explore">
           <Explore></Explore>
          </Route>
-         {/* <Route path="*">
+         {/* <Route exact path="*">
           <NotFound></NotFound>
          </Route> */}
 

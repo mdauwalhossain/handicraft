@@ -15,7 +15,7 @@ const Products = () => {
     return (
         <div>            
           <Container>
-            <h1>Products</h1>
+            <h1 style={{color:'blue'}}>Products</h1>
             <Grid container spacing={2}>              
               {
               bookings.slice(0,6).map(booking => <Body
@@ -24,6 +24,11 @@ const Products = () => {
               ></Body>)
             }
             </Grid>
+
+              <h2 style={{color:'red'}} >Something Special</h2>
+            <img src="https://handicraftitemsmanufacturersindelhi.files.wordpress.com/2018/03/cropped-pics2.jpg" alt="" />
+
+            <h3 style={{color:'blue'}} >Review</h3>
         </Container>
         </div>
     );
