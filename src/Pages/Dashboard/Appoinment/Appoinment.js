@@ -26,7 +26,8 @@ const Appoinment = () => {
     } ,[])
     return (
         <div>
-            Appointment {appointments.length}
+          <h3> Number of Booking: {appointments.length}</h3>
+           
             <TableContainer component={Paper}>
       <Table sx={{}} aria-label="simple table">
         <TableHead>
