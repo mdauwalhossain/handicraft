@@ -22,7 +22,7 @@ const Appoinment = () => {
     } ,[])
     return (
         <div>
-            appointment {appointments.length}
+            Appointment {appointments.length}
             <TableContainer component={Paper}>
       <Table sx={{}} aria-label="simple table">
         <TableHead>

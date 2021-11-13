@@ -15,15 +15,28 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Appoinment from '../Appoinment/Appoinment';
-import { Button, Grid } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch
+} from "react-router-dom";
+import DashboardHome from '../DashboardHome/DashboardHome';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import Payment from '../Payment/Payment';
+import Review from '../Review/Review';
 
 const drawerWidth = 240;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  let { path, url } = useRouteMatch();
+
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -33,8 +46,9 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <NavLink  style={{ textDecoration: 'none', color: 'red'}} to="/purchase"><Button color="inherit">Action</Button></NavLink>
+      
       <List>
+        
         {['Order', 'Product', 'Admin', 'Manage'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
@@ -71,7 +85,13 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Handcraft site (Booking Information)
+            
+            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to="/appointment"><Button color="inherit">Appointmet</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}`}><Button color="inherit">Dashboard</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/make-admin`}><Button color="inherit">Make-Admin</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/payment`}><Button color="inherit">Payment</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/review`}><Button color="inherit">Review</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/my-order`}><Button color="inherit">My Order</Button></NavLink>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -111,13 +131,29 @@ function Dashboard(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
+
+        <Switch>
+        <Route exact path={path}>
+          <DashboardHome></DashboardHome>
+        </Route>
+        <Route path={`${path}/make-admin`}>
+          <MakeAdmin></MakeAdmin>
+        </Route>
+        <Route path={`${path}/payment`}>
+          <Payment></Payment>
+        </Route>
+        <Route path={`${path}/review`}>
+          <Review></Review>
+        </Route>
+       
+
+      </Switch>
        
         <Typography variant="h6" gutterBottom component="div">
           
         </Typography>
-        <Grid items xs={12} md={8}>
-        <Appoinment></Appoinment>
-        </Grid>
+       
+     
         
       </Box>
     </Box>
