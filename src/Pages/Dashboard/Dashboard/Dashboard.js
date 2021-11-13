@@ -29,6 +29,10 @@ import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import Payment from '../Payment/Payment';
 import Review from '../Review/Review';
+import useAuth from '../../hooks/useAuth';
+import AddProduct from './AddProduct/AddProduct';
+import ManageProducts from '../ManageProducts/ManageProducts';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const drawerWidth = 240;
 
@@ -36,7 +40,7 @@ function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
-
+  const {admin, logout} = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -63,7 +67,8 @@ function Dashboard(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-
+  
+   
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -86,12 +91,19 @@ function Dashboard(props) {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             
-            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to="/appointment"><Button color="inherit">Appointmet</Button></NavLink>
-            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}`}><Button color="inherit">Dashboard</Button></NavLink>
-            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/make-admin`}><Button color="inherit">Make-Admin</Button></NavLink>
-            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/payment`}><Button color="inherit">Payment</Button></NavLink>
-            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/review`}><Button color="inherit">Review</Button></NavLink>
-            <NavLink  style={{ textDecoration: 'none', color: 'white'}} to={`${url}/my-order`}><Button color="inherit">My Order</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'yellow'}} to="/appointment"><Button color="inherit">Appointmet</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'pink'}} to={`${url}`}><Button color="inherit">Dashboard</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'pink'}} to={`${url}/review`}><Button color="inherit">Review</Button></NavLink>
+            
+            {admin && <Box>
+              <NavLink  style={{ textDecoration: 'none', color: 'lime'}} to={`${url}/make-admin`}><Button color="inherit">Make-Admin</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'lime'}} to={`${url}/payment`}><Button color="inherit">Payment</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'lime'}} to={`${url}/manage-products`}><Button color="inherit">Manage Producs</Button></NavLink>
+            <NavLink  style={{ textDecoration: 'none', color: 'lime'}} to={`${url}/add-products`}><Button color="inherit">Add Products</Button></NavLink>
+
+             <Button onClick={logout} color="inherit">Log Out</Button>
+            </Box> }            
+            
           </Typography>
         </Toolbar>
       </AppBar>
@@ -136,12 +148,18 @@ function Dashboard(props) {
         <Route exact path={path}>
           <DashboardHome></DashboardHome>
         </Route>
-        <Route path={`${path}/make-admin`}>
+        <AdminRoute path={`${path}/make-admin`}>
           <MakeAdmin></MakeAdmin>
-        </Route>
-        <Route path={`${path}/payment`}>
+        </AdminRoute>
+        <AdminRoute path={`${path}/payment`}>
           <Payment></Payment>
-        </Route>
+        </AdminRoute>
+        <AdminRoute path={`${path}/add-products`}>
+          <AddProduct></AddProduct>
+        </AdminRoute>
+        <AdminRoute path={`${path}/manage-products`}>
+          <ManageProducts></ManageProducts>
+        </AdminRoute>
         <Route path={`${path}/review`}>
           <Review></Review>
         </Route>

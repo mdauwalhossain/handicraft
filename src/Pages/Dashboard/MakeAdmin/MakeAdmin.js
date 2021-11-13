@@ -32,14 +32,14 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            Make Admin page
+            
             <form onSubmit={handleAdminSubmit}>
             <TextField 
             sx={{ width: '50%', m: 1 }}
             label="Email"
             type="email"
             onBlur={handleOnBlur} 
-            variant="standard" />
+            variant="standard" /> <br />
             {/* <TextField 
             sx={{ width: '50%', m: 1 }}
             label="password"
@@ -47,11 +47,13 @@ const MakeAdmin = () => {
             onBlur={handleOnBlur} 
             variant="standard" /> <br /> */}
             <Button type="submit" variant="contained">Make Admin</Button>
-            </form>
+            </form> <br />
             
             {success && <Alert variant="filled" severity="success">
                 Admin added Successfully.
                 </Alert>}
+
+                <img src="https://thumbs.dreamstime.com/b/blue-tape-admin-title-admin-text-ribbon-designed-white-title-blue-stripe-vector-banner-admin-tag-135263260.jpg" alt="" />
         </div>
     );
 };
