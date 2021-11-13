@@ -29,9 +29,9 @@ function App() {
          <Route path="/explore">
           <Explore></Explore>
          </Route>
-         <Route path="*">
+         {/* <Route path="*">
           <NotFound></NotFound>
-         </Route>
+         </Route> */}
 
          <PrivateRoute path="/purchase">
           <Purchase></Purchase>
