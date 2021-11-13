@@ -12,7 +12,7 @@ const TopBanner = () => {
           <CardMedia
             sx={{maxHeight: '400px'}}
             component="img"
-            image="https://thumbs.dreamstime.com/b/indigenous-craft-market-los-ponchos-square-ecuador-town-otavalo-one-182366692.jpg"
+            image="https://media.mehrnews.com/d/2018/07/23/4/2841436.jpg"
           />
           <CardContent>
             <Link  style={{ textDecoration: 'none'}} to="/explore">
